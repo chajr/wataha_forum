@@ -1,0 +1,114 @@
+                <!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+                </div>
+                <div id="wrapfooter">
+                    <!-- IF S_DISPLAY_ONLINE_LIST -->
+                    <br clear="all" />
+                    <!-- IF LEGEND -->
+                    <div class="gensmall">
+                        {L_LEGEND} :: {LEGEND}
+                    </div>
+                    <!-- ENDIF -->
+                    <div class="left_block">
+                        <!-- IF U_VIEWONLINE -->
+                        <h4>
+                            <a href="{U_VIEWONLINE}">
+                                {L_WHO_IS_ONLINE}
+                            </a>
+                        </h4>
+                        <!-- ELSE -->
+                        <h4>
+                            {L_WHO_IS_ONLINE}
+                        </h4>
+                        <!-- ENDIF -->
+                        <span class="genmed">
+                            {TOTAL_USERS_ONLINE}<br/>({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /><br />{LOGGED_IN_USER_LIST}
+                        </span>
+                        <!-- IF LEGEND -->
+                        <!-- ENDIF -->
+                    </div>
+                    <!-- ENDIF -->
+
+                    <div class="left_block right">
+                        <h4>
+                            {L_STATISTICS}
+                        </h4>
+                        {TOTAL_POSTS}<br/>{TOTAL_TOPICS}<br/>{TOTAL_USERS}<br/>{NEWEST_USER}
+                    </div>
+                    <br clear="all" />
+
+                    <!-- PHP -->
+                    <!-- ENDPHP -->
+                    <div class="full_block">
+                        <table width="100%" cellspacing="0">
+                            <tr>
+                                <td align="{S_CONTENT_FLOW_BEGIN}" valign="top">
+                                    <table cellspacing="3" cellpadding="0" border="0">
+                                        <tr>
+                                            <td width="20" style="text-align: center;">{FOLDER_UNREAD_IMG}</td>
+                                            <td class="gensmall">{L_UNREAD_POSTS}</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td width="20" style="text-align: center;">{FOLDER_IMG}</td>
+                                            <td class="gensmall">{L_NO_UNREAD_POSTS}</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td width="20" style="text-align: center;">{FOLDER_ANNOUNCE_IMG}</td>
+                                            <td class="gensmall">{L_ICON_ANNOUNCEMENT}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">{FOLDER_HOT_UNREAD_IMG}</td>
+                                            <td class="gensmall">{L_UNREAD_POSTS_HOT}</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td style="text-align: center;">{FOLDER_HOT_IMG}</td>
+                                            <td class="gensmall">{L_NO_UNREAD_POSTS_HOT}</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td style="text-align: center;">{FOLDER_STICKY_IMG}</td>
+                                            <td class="gensmall">{L_ICON_STICKY}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;">{FOLDER_LOCKED_UNREAD_IMG}</td>
+                                            <td class="gensmall">{L_UNREAD_POSTS_LOCKED}</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td style="text-align: center;">{FOLDER_LOCKED_IMG}</td>
+                                            <td class="gensmall">{L_NO_UNREAD_POSTS_LOCKED}</td>
+                                            <td>&nbsp;&nbsp;</td>
+                                            <td style="text-align: center;">{FOLDER_MOVED_IMG}</td>
+                                            <td class="gensmall">{L_TOPIC_MOVED}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="{S_CONTENT_FLOW_END}"><span class="gensmall"><!-- BEGIN rules -->{rules.RULE}<br /><!-- END rules --></span></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+                    <br clear="all" />
+
+                    <form method="post" action="{S_LOGIN_ACTION}">
+
+                        <table class="tablebg" width="100%" cellspacing="1">
+                            <tr>
+                                <td class="cat"><h4><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a></h4></td>
+                            </tr>
+                            <tr>
+                                <td class="row1" align="center"><span class="genmed">{L_USERNAME}:</span> <input class="post" type="text" name="username" size="10" />&nbsp; <span class="genmed">{L_PASSWORD}:</span> <input class="post" type="password" name="password" size="10" />&nbsp; <!-- IF S_AUTOLOGIN_ENABLED --> <span class="gensmall">{L_LOG_ME_IN}</span> <input type="checkbox" class="radio" name="autologin" /><!-- ENDIF -->&nbsp; <input type="submit" class="btnmain" name="login" value="{L_LOGIN}" /></td>
+                            </tr>
+                        </table>
+                        {S_LOGIN_REDIRECT}
+                        {S_FORM_TOKEN}
+                    </form>
+                    <!-- ENDIF -->
+                    <!-- INCLUDE mchat_stats.html -->
+                    <div class="clear_both"></div>
+                    <span class="copyright">
+                        JSMA Wataha &copy; 2013
+                    <!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
+                    <!-- IF DEBUG_OUTPUT --><br /><bdo dir="ltr">[ {DEBUG_OUTPUT} ]</bdo><!-- ENDIF -->
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./styles/jsma/template/jQuery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="./styles/jsma/template/jquery-ui-1.10.1.custom.min.js"></script>
+        <script type="text/javascript" src="./styles/jsma/template/scripts.js"></script>
+    </body>
+</html>
