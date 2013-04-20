@@ -161,6 +161,21 @@ body {
     margin-top: 25px;
     float: left;
 }
+#motto {
+    display: block;
+    float: left;
+    margin: 50px 0 0 40px;
+    font-size: 13px;
+}
+#motto span{
+    font-size: 24px;
+    font-weight: bold;
+}
+#motto cite {
+    display: block;
+    color: #c2c4c5;
+    font-size: 11px;
+}
 .breadcrumbs {
     padding: 10px;
     border: 1px solid #444;
@@ -687,6 +702,9 @@ a:link {
     color: #aaa;
     text-decoration: none;
 }
+.postbody a:link {
+    text-decoration: underline;
+}
 
 a:visited {
     color: #A5904C;
@@ -707,7 +725,7 @@ a.forumlink {
     color: #B9B38D;
     font-weight: bold;
     /*font-family: "Lucida Grande", Helvetica, Arial, sans-serif;*/
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a.topictitle {
@@ -874,6 +892,9 @@ input.btnlite, input.btnmain { /* This line added by Kyon */
     top: -1px;
     right: -18px;
     z-index: 1000;
+}
+.new_breadcrumbs a:hover .arrow {
+    background-image: url('./images/arrow_hover.png');
 }
 
 .btnlite {
