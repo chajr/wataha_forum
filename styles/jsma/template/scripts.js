@@ -81,4 +81,9 @@ $(document).ready(function()
         $('.new_breadcrumbs a:last-child i').remove();
         $('.new_breadcrumbs a:last-child .arrow').remove();
     });
+    
+    stat = $('#wrapfooter .stat_block div').text();
+    if (stat === '') {
+        $('#wrapfooter .stat_block').remove();
+    }
 });
