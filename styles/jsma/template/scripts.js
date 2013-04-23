@@ -86,4 +86,9 @@ $(document).ready(function()
     if (stat === '') {
         $('#wrapfooter .stat_block').remove();
     }
+    
+    postRow = $('td img[src="./styles/jsma/imageset/forum_unread.gif"]').parent().parent();
+    postRow.find('.forumlink').css('color', '#a4634d');
+    postRow = $('td img[src="./styles/jsma/imageset/topic_unread_mine.gif"]').parent().parent();
+    postRow.find('.topictitle').css('color', '#a4634d');
 });
