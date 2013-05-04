@@ -39,13 +39,16 @@ $(document).ready(function()
         }
     }
     $('#toolbar_block').tooltip({
+        show: false,
+        hide: false,
         position: {
-            my: "left+40 center",
-            at: "left+40 center",
+            my: "left+25 top",
+            at: "left+25 top",
             using: function (position, feedback)
             {
                 $( this ).css( position );
-                $( "<div>").css('margin-left', '80px');
+                $('<div>').css('margin-left', '80px');
+                $(this).find('div').css('height', '24px');
             }
         }
     });

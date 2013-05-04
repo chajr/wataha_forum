@@ -774,12 +774,12 @@ button.ui-button::-moz-focus-inner {
     position: absolute;
     z-index: 9999;
     max-width: 300px;
-    -webkit-box-shadow: 0 0 5px #111;
-    box-shadow: 0 0 5px #111;
+    /*-webkit-box-shadow: 0 0 5px #111;*/
+    /*box-shadow: 0 0 5px #111;*/
     background-color: #fff;
 }
 body .ui-tooltip {
-    border-width: 2px;
+    border-width: 0px;
 }
 .ui-tooltip.ui-widget {
     background-color: #fff;
@@ -790,7 +790,7 @@ body .ui-tooltip {
 .ui-tooltip .ui-tooltip-content {
     background-color: #ff6600;
     color: #fff;
-    padding: 8px;
+    padding: 13px;
     font-size: 14px;
     font-weight: bold;
 }
