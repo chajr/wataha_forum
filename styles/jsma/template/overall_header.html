@@ -156,121 +156,121 @@ function marklist(id, name, state)
 <body class="{S_CONTENT_DIRECTION}">
 
 <a name="top"></a>
-<div id="block">
-    <div id="toolbar_block">
-        <!--odpowiedz, dodaj temat-->
-        <ul>
-            <!-- IF S_DISPLAY_POST_INFO and not S_IS_BOT -->
-            <li>
-                <a href="{U_POST_NEW_TOPIC}" title="Nowy temat" class="new_topic">
-                    <i class="icon-file-new"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- IF not S_IS_BOT -->
-            <!-- IF S_DISPLAY_REPLY_INFO -->
-            <li>
-                <a href="{U_POST_REPLY_TOPIC}" title="Odpowiedz" class="answer">
-                    <i class="icon-repeat-alt"></i>
-                </a>
-            </li><!-- ENDIF -->
-            <!-- ENDIF -->
-            <!-- IF U_RESTORE_PERMISSIONS -->
-            <li>
-                <a href="{U_RESTORE_PERMISSIONS}" title="{L_RESTORE_PERMISSIONS}">
-                    <img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" alt="*" />
-                    {L_RESTORE_PERMISSIONS}
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN -->
-            <li>
+<div id="toolbar_block">
+    <!--odpowiedz, dodaj temat-->
+    <ul>
+        <!-- IF S_DISPLAY_POST_INFO and not S_IS_BOT -->
+        <li>
+            <a href="{U_POST_NEW_TOPIC}" title="Nowy temat" class="new_topic">
+                <i class="icon-file-new"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF not S_IS_BOT -->
+        <!-- IF S_DISPLAY_REPLY_INFO -->
+        <li>
+            <a href="{U_POST_REPLY_TOPIC}" title="Odpowiedz" class="answer">
+                <i class="icon-repeat-alt"></i>
+            </a>
+        </li><!-- ENDIF -->
+        <!-- ENDIF -->
+        <!-- IF U_RESTORE_PERMISSIONS -->
+        <li>
+            <a href="{U_RESTORE_PERMISSIONS}" title="{L_RESTORE_PERMISSIONS}">
+                <img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" alt="*" />
+                {L_RESTORE_PERMISSIONS}
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN -->
+        <li>
                 <span style="color: red;">
                     {L_BOARD_DISABLED}
                 </span>
-            </li>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF not S_IS_BOT -->
+        <li>
+            <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}"  class="log_out">
+                <i class="icon-off"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF S_DISPLAY_SEARCH -->
+        <li>
+            <a href="{U_SEARCH}" title="{L_SEARCH}"  class="search">
+                <i class="icon-search"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF not S_IS_BOT -->
+        <!-- IF S_USER_LOGGED_IN -->
+        <li>
+            <a href="{U_PROFILE}" title="{L_PROFILE}"  class="account">
+                <i class="icon-torso"></i>
+            </a>
+        </li>
+        <!-- IF S_DISPLAY_PM -->
+        <li>
+            <a href="{U_PRIVATEMSGS}" title="Prywatne wiadomości" class="messages">
+                <i class="icon-envelope"></i>
+                {PRIVATE_MESSAGE_INFO}
+                <!-- IF PRIVATE_MESSAGE_INFO_UNREAD -->, {PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF -->
+            </a>
+        </li>
+        <!-- ELSEIF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
+        <li>
+            <a href="{U_REGISTER}" title="{L_REGISTER}">
+                <img src="{T_THEME_PATH}/images/icon_mini_register.gif" width="12" height="13" alt="*" />
+                {L_REGISTER}
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- ENDIF -->
+        <!-- IF S_DISPLAY_MEMBERLIST -->
+        <li>
+            <a href="{U_MEMBERLIST}" title="{L_MEMBERLIST}"  class="members">
+                <i class="icon-group"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- ENDIF -->
+        <!-- IF S_MCHAT_ENABLE and U_MCHAT -->
+        <li>
+            <a href="{U_MCHAT}#mChat" title="{L_MCHAT_TITLE}"  class="mchat">
+                <i class="icon-comment-alt"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF not S_IS_BOT or U_TEAM -->
+        <li>
+            <!-- IF U_TEAM -->
+            <a href="{U_TEAM}" title="{L_THE_TEAM}"  class="admins">
+                <i class="icon-address-book"></i>
+            </a>
             <!-- ENDIF -->
-            <!-- IF not S_IS_BOT -->
-            <li>
-                <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}"  class="log_out">
-                    <i class="icon-off"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- IF S_DISPLAY_SEARCH -->
-            <li>
-                <a href="{U_SEARCH}" title="{L_SEARCH}"  class="search">
-                    <i class="icon-search"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- IF not S_IS_BOT -->
-            <!-- IF S_USER_LOGGED_IN -->
-            <li>
-                <a href="{U_PROFILE}" title="{L_PROFILE}"  class="account">
-                    <i class="icon-torso"></i>
-                </a>
-            </li>
-            <!-- IF S_DISPLAY_PM -->
-            <li>
-                 <a href="{U_PRIVATEMSGS}" title="Prywatne wiadomości" class="messages">
-                     <i class="icon-envelope"></i>
-                     {PRIVATE_MESSAGE_INFO}
-                     <!-- IF PRIVATE_MESSAGE_INFO_UNREAD -->, {PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF -->
-                 </a>
-            </li>
-            <!-- ELSEIF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
-            <li>
-                <a href="{U_REGISTER}" title="{L_REGISTER}">
-                    <img src="{T_THEME_PATH}/images/icon_mini_register.gif" width="12" height="13" alt="*" />
-                    {L_REGISTER}
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- ENDIF -->
-            <!-- IF S_DISPLAY_MEMBERLIST -->
-            <li>
-                <a href="{U_MEMBERLIST}" title="{L_MEMBERLIST}"  class="members">
-                    <i class="icon-group"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- ENDIF -->
-            <!-- IF S_MCHAT_ENABLE and U_MCHAT -->
-            <li>
-                <a href="{U_MCHAT}#mChat" title="{L_MCHAT_TITLE}"  class="mchat">
-                    <i class="icon-comment-alt"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- IF not S_IS_BOT or U_TEAM -->
-            <li>
-                <!-- IF U_TEAM -->
-                <a href="{U_TEAM}" title="{L_THE_TEAM}"  class="admins">
-                    <i class="icon-address-book"></i>
-                </a>
-                <!-- ENDIF -->
-            </li>
-            <!-- ENDIF -->
-            <!-- IF U_ACP -->
-            <li>
-                <a href="{U_ACP}" title="{L_ACP}" class="admin">
-                    <i class="icon-star"></i>
-                    <i class="icon-star"></i>
-                    <i class="icon-star"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-            <!-- IF U_MCP -->
-            <li>
-                <a href="{U_MCP}" title="{L_MCP}"  class="moder">
-                    <i class="icon-star"></i>
-                </a>
-            </li>
-            <!-- ENDIF -->
-        </ul>
-    </div>
-    <div id="main_content_block">
+        </li>
+        <!-- ENDIF -->
+        <!-- IF U_ACP -->
+        <li>
+            <a href="{U_ACP}" title="{L_ACP}" class="admin">
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+                <i class="icon-star"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+        <!-- IF U_MCP -->
+        <li>
+            <a href="{U_MCP}" title="{L_MCP}"  class="moder">
+                <i class="icon-star"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
+    </ul>
+</div>
+<div id="block">
+    <!--<div id="main_content_block">-->
         <div id="wrapheader">
             <div id="user_bar">
                 <ul>
@@ -356,7 +356,6 @@ function marklist(id, name, state)
                 </blockquote>
             </div>
         </div>
-        <div class="clear_both"></div>
         <div id="wrapcentre">
             <br style="clear: both;" />
 

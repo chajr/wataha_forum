@@ -21,6 +21,9 @@
 
 html {
     font-size: 100%;
+    margin:0;
+    padding:0;
+    height:100%;
 }
 
 body {
@@ -31,18 +34,26 @@ body {
     margin: 0;
     /*background: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=a8a8a8&density=64&opacity=14);*/
     background-image: url(http://bradjasper.com/subtle-patterns-bookmarklet/patterns/black_paper.png);
+    padding:0;
+    height:100%;
 }
 
 #wrapheader {
-    height: auto !important;
+    height: 130px!important;
     padding: 0;
+    margin-left: 80px;
 }
 #block {
-    display: table;
+    position:relative;
+    margin:0 auto;
+    height:auto !important;
+    height:100%;
+    min-height:100%;
+    z-index: 0;
 }
 #wrapcentre {
-    padding-left: 10px;
-    display: table-cell;
+    margin: 0 10px 0 90px;
+    padding-bottom: 310px;
 }
 #toolbar_block {
     width: 80px;
@@ -54,8 +65,15 @@ body {
     background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(36,36,36,1) 12%, rgba(20,20,20,1) 25%, rgba(0,0,0,1) 39%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
     background: linear-gradient(to bottom, rgba(41,41,41,1) 0%, rgba(36,36,36,1) 12%, rgba(20,20,20,1) 25%, rgba(0,0,0,1) 39%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#131313', GradientType=0 );
-    display: table-cell;
     border-right: 1px solid #555;
+    z-index: 1;
+    position: fixed;
+    height: 100%;
+}
+#main_content_block {
+    width:100%;
+    position: absolute;
+    height: 100%;
 }
 .clear_both {
     clear: both;
@@ -65,9 +83,14 @@ body {
     clear: both;
     background-color: #111;
     border-top: 1px solid #333;
-    padding: 10px;
-    margin-top: 25px;
-    height: 100%;
+    width: 100%;
+    position:absolute;
+    bottom:0;
+    z-index: 0;
+    overflow: hidden;
+}
+.footer_block{
+    margin: 0 10px 0 90px;
 }
 #user_bar {
     position: fixed;

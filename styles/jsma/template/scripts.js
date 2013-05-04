@@ -1,21 +1,6 @@
 var cookieDate = new Date().getMonth() +6;
 $(document).ready(function()
 {
-    calculateDimensions();
-    $(window).resize(function() {
-        calculateDimensions();
-    });
-    function calculateDimensions ()
-    {
-        tollbarWidth    = $('#toolbar_block').width();
-        mainWidth       = $(window).width();
-        mainHeight      = $(window).height();
-        width           = mainWidth -tollbarWidth -20;
-        $('#wrapcentre')        .css('width', width + 'px');
-        $('#main_content_block').css('min-height', mainHeight + 'px');
-        $('#toolbar_block')     .css('min-height', mainHeight + 'px');
-    }
-
     if (getCookie('user_bar') == 'hide') {
         $('#user_bar').hide();
         $('#show_user_bar').show();
