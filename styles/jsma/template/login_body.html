@@ -51,10 +51,28 @@
 		</tr>
 		<!-- IF S_DISPLAY_FULL_LOGIN -->
 			<!-- IF S_AUTOLOGIN_ENABLED -->
-			<tr>
-				<td>&nbsp;</td>
-				<td><input type="checkbox" class="radio" name="autologin" tabindex="3" /> <span class="gensmall">{L_LOG_ME_IN}</span></td>
-			</tr>
+            <tr>
+                <td class="row1" align="center">
+                    <div class="login_block">
+                        <span class="genmed">{L_USERNAME}:</span>
+                        <input class="post" type="text" name="username" size="10" />
+                    </div>
+                    &nbsp;
+                    <div class="login_block">
+                        <span class="genmed">{L_PASSWORD}:</span>
+                        <input class="post" type="password" name="password" size="10" />
+                    </div>
+                    &nbsp;
+                    <!-- IF S_AUTOLOGIN_ENABLED -->
+                    <div class="login_block">
+                        <span class="gensmall">{L_LOG_ME_IN}</span>
+                        <input type="checkbox" class="radio" name="autologin" />
+                    </div>
+                    <!-- ENDIF -->
+                    &nbsp;
+                    <input type="submit" class="btnmain" name="login" value="{L_LOGIN}" />
+                </td>
+            </tr>
 			<!-- ENDIF -->
 			<tr>
 				<td>&nbsp;</td>

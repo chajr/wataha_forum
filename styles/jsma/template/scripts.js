@@ -79,4 +79,9 @@ $(document).ready(function()
     postRow.find('.forumlink').css('color', '#a4634d');
     postRow = $('td img[src="./styles/jsma/imageset/topic_unread_mine.gif"]').parent().parent();
     postRow.find('.topictitle').css('color', '#a4634d');
+
+    $('#toolbar_block .responsive').click(function()
+    {
+        $('#toolbar_block ul').toggle();
+    });
 });

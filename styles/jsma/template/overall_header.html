@@ -10,6 +10,7 @@
 <meta name="distribution" content="global" />
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 {META}
 <title>{SITENAME} &bull; <!-- IF S_IN_MCP -->{L_MCP} &bull; <!-- ELSEIF S_IN_UCP -->{L_UCP} &bull; <!-- ENDIF -->{PAGE_TITLE}</title>
 
@@ -33,7 +34,7 @@
 -->
 
 <link rel="stylesheet" href="{T_STYLESHEET_LINK}" type="text/css" />
-
+<link rel="stylesheet" href="./styles/jsma/theme/mobile.css" type="text/css" />
 <script type="text/javascript">
 // <![CDATA[
 <!-- IF S_USER_PM_POPUP and S_NEW_PM -->
@@ -157,7 +158,6 @@ function marklist(id, name, state)
 
 <a name="top"></a>
 <div id="toolbar_block">
-    <!--odpowiedz, dodaj temat-->
     <ul>
         <!-- IF S_DISPLAY_POST_INFO and not S_IS_BOT -->
         <li>
@@ -268,6 +268,9 @@ function marklist(id, name, state)
         </li>
         <!-- ENDIF -->
     </ul>
+    <div class="responsive">
+        <i class="icon-align-justify"></i>
+    </div>
 </div>
 <div id="block">
     <!--<div id="main_content_block">-->

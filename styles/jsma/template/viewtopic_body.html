@@ -26,7 +26,7 @@
     <!-- ENDIF -->
     <!-- ENDIF -->
 </div>
-<div class="breadcrumbs row1" style="margin-top:10px">
+<div class="breadcrumbs row1 search_box" style="margin-top:10px">
     <table width="100%" cellspacing="0">
         <tr>
             <td><!-- IF S_DISPLAY_SEARCHBOX --><!-- INCLUDE searchbox.html --><!-- ENDIF --></td>
@@ -36,7 +36,7 @@
 </div>
 
 <br clear="all" /><br />
-<div class="breadcrumbs row1" style="margin-bottom:10px">
+<div class="breadcrumbs row1 pagination_box" style="margin-bottom:10px">
     <table width="100%" cellspacing="1">
         <tr>
             <!-- IF TOTAL_POSTS -->
@@ -299,7 +299,7 @@
 <!-- END postrow -->
 
     <!-- IF not S_IS_BOT -->
-    <table width="100%" cellspacing="1" class="tablebg">
+    <table width="100%" cellspacing="1" class="tablebg viewtpic_box">
     <tr align="center">
         <td class="cat"><form name="viewtopic" method="post" action="{S_TOPIC_ACTION}"><span class="gensmall">{L_DISPLAY_POSTS}:</span> {S_SELECT_SORT_DAYS}&nbsp;<span class="gensmall">{L_SORT_BY}</span> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}&nbsp;<input class="btnlite" type="submit" value="{L_GO}" name="sort" /></form></td>
     </tr>
@@ -310,7 +310,7 @@
     <div class="breadcrumbs row1 closed">ZAMKNIĘTY</div>
     <!-- ENDIF -->
     <!-- ENDIF -->
-    <div class="breadcrumbs row1" style="margin-top:10px">
+    <div class="breadcrumbs row1 pagination_box" style="margin-top:10px">
         <table width="100%" cellspacing="1">
             <tr>
                 <!-- IF TOTAL_POSTS -->
@@ -337,7 +337,7 @@
 <br clear="all" />
 
 <!-- IF S_TOPIC_MOD -->
-<div class="breadcrumbs row1"
+<div class="breadcrumbs row1 moderator_box">
     <form method="post" action="{S_MOD_ACTION}">
         <span class="gensmall">{L_QUICK_MOD}:</span>
         {S_TOPIC_MOD}
