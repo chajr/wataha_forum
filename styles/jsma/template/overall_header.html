@@ -159,6 +159,13 @@ function marklist(id, name, state)
 <a name="top"></a>
 <div id="toolbar_block">
     <ul>
+        <!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+        <li>
+            <a href="{U_REGISTER}"  title="{L_REGISTER}">
+                <i class="icon-group-alt"></i>
+            </a>
+        </li>
+        <!-- ENDIF -->
         <!-- IF S_DISPLAY_POST_INFO and not S_IS_BOT -->
         <li>
             <a href="{U_POST_NEW_TOPIC}" title="Nowy temat" class="new_topic">
