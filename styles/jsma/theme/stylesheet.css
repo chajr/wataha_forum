@@ -810,6 +810,8 @@ textarea {
     font-weight: normal;
     border: 1px solid #666;
     padding: 2px;
+    width: 90%;
+    min-height: 120px;
 }
 
 select {
@@ -844,6 +846,7 @@ input.radio {
     border-style: solid;
     border-width: 1px;
     color: #D2D4D5; /* This line added by Kyon */
+    width: 90%;
 }
 
 .btnbbcode {
@@ -1115,8 +1118,11 @@ p.forumdesc strong /* This line added by Kyon */
 {
     font-size: 10px;
 }
-.login_block{
-    display: inline;
+.login_block input{
+    width:200px;
+}
+.login_block span{
+    display: block;
 }
 #toolbar_block .responsive{
     width: 100%;
