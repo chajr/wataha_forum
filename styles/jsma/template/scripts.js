@@ -77,11 +77,24 @@ $(document).ready(function()
     
     postRow = $('td img[src="./styles/jsma/imageset/forum_unread.gif"]').parent().parent();
     postRow.find('.forumlink').css('color', '#a4634d');
+
     postRow = $('td img[src="./styles/jsma/imageset/topic_unread_mine.gif"]').parent().parent();
     postRow.find('.topictitle').css('color', '#a4634d');
+
+    postRow = $('td img[src="./styles/jsma/imageset/topic_read_locked.gif"]').parent().parent();
+    changeLockedColor(postRow);
+
+    postRow = $('td img[src="./styles/jsma/imageset/topic_read_locked_mine.gif"]').parent().parent();
+    changeLockedColor(postRow);
 
     $('#toolbar_block .responsive').click(function()
     {
         $('#toolbar_block ul').toggle();
     });
 });
+function changeLockedColor(lockedBlock)
+{
+    lockedBlock.find('.topictitle') .css('color', '#696B6C');
+    lockedBlock.find('.gensmall')   .css('color', '#696B6C');
+    lockedBlock.find('.gensmall a') .css('color', '#696B6C');
+}

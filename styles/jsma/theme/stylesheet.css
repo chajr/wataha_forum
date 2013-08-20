@@ -53,7 +53,8 @@ body {
 }
 #wrapcentre {
     margin: 0 10px 0 65px;
-    padding-bottom: 310px;
+    /*padding-bottom: 310px;*/
+    padding-bottom: 15px;
 }
 #toolbar_block {
     width: 60px;
@@ -75,7 +76,7 @@ body {
     background-color: #111;
     border-top: 1px solid #333;
     width: 100%;
-    position:absolute;
+    /*position:absolute;*/
     bottom:0;
     z-index: 0;
     overflow: hidden;
@@ -847,6 +848,7 @@ input.radio {
     border-width: 1px;
     color: #D2D4D5; /* This line added by Kyon */
     width: 90%;
+    padding:5px;
 }
 
 .btnbbcode {
