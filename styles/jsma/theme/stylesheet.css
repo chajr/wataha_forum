@@ -1146,3 +1146,11 @@ p.forumdesc strong /* This line added by Kyon */
 #toolbar_block .responsive:hover{
     background-color: #ff6600;
 }
+.postdetails.rank{
+    text-align: center;
+    background-color: #161616;
+    border: 1px dashed #666;
+}
+.avatar_image{
+    text-align: center;
+}
