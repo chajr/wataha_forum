@@ -25,6 +25,9 @@
     {
         padding-bottom: 420px;
     }
+    .forabg{
+        display: block;
+    }
 }
 @media only screen and ( max-width: 500px )
 {
@@ -37,6 +40,17 @@
     {
         display: none;
     }
+    .mChatPanel input{
+        font-size:18px;
+        margin-bottom: 15px;
+        padding:5px;
+    }
+    #show_chat_block, #toolbar_block ul{
+        display: block;
+    }
+    .mChatPanel input.mChatText{
+        width:90%!important;
+    }
 }
 @media only screen and ( max-width: 480px )
 {
@@ -47,7 +61,7 @@
     {
         padding-bottom: 210px;
     }
-    .forabg, .footer_block .gensmall, .footer_block .left_block, .moderator_box,
+    .footer_block .gensmall, .footer_block .left_block, .moderator_box,
     .footer_block .full_block, #motto, .header .gen, #user_bar, #show_user_bar,
     .header_logo, .main_table tbody tr td[width="50"] img, .login_block input.radio,
     .main_table tbody tr td[width="100%"] p, .forumdesc, .search_box, .viewtpic_box,
@@ -67,6 +81,17 @@
     .smiles_box
     {
         display: none!important;
+    }
+    .forabg{
+        display: none;
+    }
+    .mChatPanel input{
+        font-size:18px;
+        margin-bottom: 15px;
+        padding:5px;
+    }
+    .mChatPanel input.mChatText{
+        width:100%
     }
     .main_table tbody tr td[width="25"], .main_table tbody tr td[width="50"]{
         width: 0!important;
@@ -113,7 +138,7 @@
     #toolbar_block ul li a i{
         line-height: 65px;
     }
-    #toolbar_block .responsive{
+    #toolbar_block .responsive, #show_chat_block{
         display: block;
     }
     .footer_block{

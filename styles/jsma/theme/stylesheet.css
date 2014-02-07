@@ -34,6 +34,7 @@ body {
     margin: 0;
     /*background: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=a8a8a8&density=64&opacity=14);*/
     background-image: url(http://bradjasper.com/subtle-patterns-bookmarklet/patterns/black_paper.png);
+    background-repeat: repeat;
     padding:0;
     height:100%;
 }
@@ -1143,7 +1144,7 @@ p.forumdesc strong /* This line added by Kyon */
     cursor: pointer;
     line-height: 40px;
 }
-#toolbar_block .responsive:hover{
+#toolbar_block .responsive:hover, #show_chat_block{
     background-color: #ff6600;
 }
 .postdetails.rank{
@@ -1153,4 +1154,16 @@ p.forumdesc strong /* This line added by Kyon */
 }
 .avatar_image{
     text-align: center;
+}
+#show_chat_block{
+    margin-top: 15px;
+    display:none;
+    background-color: #666666;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
 }

@@ -91,6 +91,11 @@ $(document).ready(function()
     {
         $('#toolbar_block ul').toggle();
     });
+
+    $('#show_chat_block').click(function()
+    {
+        $('.forabg').toggle();
+    });
 });
 function changeLockedColor(lockedBlock)
 {
