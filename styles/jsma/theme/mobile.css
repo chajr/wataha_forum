@@ -107,7 +107,7 @@
         margin-left: 0;
     }
     #logodesc .header{
-        margin: 40px auto 0;
+        display:none;
     }
     .header h1{
         font-size: 20px;

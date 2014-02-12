@@ -1,6 +1,6 @@
-JSMA Wataha
+Wataha
 ============
 
-Forum Jurajskiego Stowarzyszenia Maniaków Airsoftu WATAHA
+Forum Grupy WATAHA
 
 http://wataha.at/forum
