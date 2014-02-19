@@ -184,8 +184,7 @@ function marklist(id, name, state)
         <!-- IF U_RESTORE_PERMISSIONS -->
         <li>
             <a href="{U_RESTORE_PERMISSIONS}" title="{L_RESTORE_PERMISSIONS}">
-                <img src="{T_THEME_PATH}/images/icon_mini_login.gif" width="12" height="13" alt="*" />
-                {L_RESTORE_PERMISSIONS}
+                <i class="icon-refresh"></i>
             </a>
         </li>
         <!-- ENDIF -->
@@ -226,12 +225,11 @@ function marklist(id, name, state)
             </a>
         </li>
         <!-- ELSEIF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
-        <li>
-            <a href="{U_REGISTER}" title="{L_REGISTER}">
-                <img src="{T_THEME_PATH}/images/icon_mini_register.gif" width="12" height="13" alt="*" />
-                {L_REGISTER}
-            </a>
-        </li>
+        <!--<li>-->
+            <!--<a href="{U_REGISTER}" title="{L_REGISTER}" class="">-->
+                <!--<i class="icon-group-alt"></i>-->
+            <!--</a>-->
+        <!--</li>-->
         <!-- ENDIF -->
         <!-- ENDIF -->
         <!-- IF S_DISPLAY_MEMBERLIST -->
@@ -250,13 +248,13 @@ function marklist(id, name, state)
         </li>
         <!-- ENDIF -->
         <!-- IF not S_IS_BOT or U_TEAM -->
+        <!-- IF U_TEAM -->
         <li>
-            <!-- IF U_TEAM -->
             <a href="{U_TEAM}" title="{L_THE_TEAM}"  class="admins">
                 <i class="icon-address-book"></i>
             </a>
-            <!-- ENDIF -->
         </li>
+        <!-- ENDIF -->
         <!-- ENDIF -->
         <!-- IF U_ACP -->
         <li>
