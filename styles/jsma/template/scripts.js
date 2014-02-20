@@ -55,8 +55,9 @@ $(document).ready(function()
 
     $('.new_breadcrumbs').each(function()
     {
-        breadcrumbsLength = $('.new_breadcrumbs').length;
-        elements = 0;
+        var breadcrumbsLength   = $('.new_breadcrumbs').length;
+        var elements            = 0;
+
         $(this).find('a').each(function(){
             if (elements) {
                 $(this).css('margin-left', '-22px');
@@ -66,16 +67,17 @@ $(document).ready(function()
             breadcrumbsLength--;
             elements++;
         });
+
         $('.new_breadcrumbs a:last-child i').remove();
         $('.new_breadcrumbs a:last-child .arrow').remove();
     });
     
-    stat = $('#wrapfooter .stat_block div').text();
+    var stat = $('#wrapfooter .stat_block div').text();
     if (stat === '') {
         $('#wrapfooter .stat_block').remove();
     }
-    
-    postRow = $('td img[src="./styles/jsma/imageset/forum_unread.gif"]').parent().parent();
+
+    var postRow = $('td img[src="./styles/jsma/imageset/forum_unread.gif"]').parent().parent();
     postRow.find('.forumlink').css('color', '#a4634d');
 
     postRow = $('td img[src="./styles/jsma/imageset/topic_unread_mine.gif"]').parent().parent();
@@ -96,7 +98,31 @@ $(document).ready(function()
     {
         $('.forabg').toggle();
     });
+
+    var footerHeight    = $('#wrapfooter').height();
+    var footerPosition  = $('#wrapfooter').position();
+    var windowHeight    = $(window).height();
+
+    $(window).resize(function() {
+        footerHeight    = $('#wrapfooter').height();
+        windowHeight    = $(window).height();
+        footerPosition  = $('#wrapfooter').position();
+        setFooterPosition(footerHeight, footerPosition, windowHeight);
+    });
+    setFooterPosition(footerHeight, footerPosition, windowHeight);
+    
 });
+function setFooterPosition(footerHeight, footerPosition, windowHeight)
+{
+    var roundedFooterPosition   = Math.floor(footerPosition.top);
+    var check                   = footerHeight + roundedFooterPosition;
+
+    if (check < windowHeight) {
+        var newPosition = windowHeight - footerHeight;
+        console.log(newPosition);
+        $('#wrapfooter').offset({top: newPosition -1});
+    }
+}
 function changeLockedColor(lockedBlock)
 {
     lockedBlock.find('.topictitle') .css('color', '#696B6C');
