@@ -1167,3 +1167,8 @@ p.forumdesc strong /* This line added by Kyon */
     text-align: center;
     width: 100%;
 }
+.regulamin_wataha{
+    color: #FFFFFF !important;
+    font-size: 16px !important;
+    text-decoration: underline !important;
+}

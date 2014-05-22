@@ -110,7 +110,14 @@ $(document).ready(function()
         setFooterPosition(footerHeight, footerPosition, windowHeight);
     });
     setFooterPosition(footerHeight, footerPosition, windowHeight);
-    
+
+    $('.topictitle').each(function ()
+    {
+        var string = $(this).text();
+        if (string === 'Regulamin Grupy Wataha') {
+            $(this).addClass('regulamin_wataha');
+        }
+    });
 });
 function setFooterPosition(footerHeight, footerPosition, windowHeight)
 {
