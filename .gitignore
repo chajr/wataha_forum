@@ -1,0 +1,16 @@
+.name
+blueframework-3.0.iml
+encodings.xml
+magicento.xml
+misc.xml
+modules.xml
+scope_settings.xml
+vcs.xml
+config.php
+.idea
+cache/*
+!cache/.htaccess
+!cache/index.html
+files/*
+!files/.htaccess
+!files/index.html
