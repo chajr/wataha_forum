@@ -3273,6 +3273,10 @@ function build_hidden_fields($field_ary, $specialchar = false, $stripslashes = f
 
     foreach ($field_ary as $name => $vars)
     {
+        if ($name === 'confirm_id') {
+            continue;
+        }
+
         $name = ($stripslashes) ? stripslashes($name) : $name;
         $name = ($specialchar) ? htmlspecialchars($name, ENT_COMPAT, 'UTF-8') : $name;
 

@@ -118,6 +118,12 @@ $(document).ready(function()
             $(this).addClass('regulamin_wataha');
         }
     });
+
+    $('#submit').on('click', function() {
+        let testVal = $('#test').data('test');
+        $('#confirm_id').val(testVal);
+
+    });
 });
 function setFooterPosition(footerHeight, footerPosition, windowHeight)
 {
