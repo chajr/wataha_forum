@@ -6,7 +6,6 @@ misc.xml
 modules.xml
 scope_settings.xml
 vcs.xml
-config.php
 .idea
 cache/*
 !cache/.htaccess
