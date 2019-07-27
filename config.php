@@ -2,8 +2,8 @@
 // phpBB 3.0.x auto-generated configuration file
 // Do not change anything in this file!
 $dbms = 'mysqli';
-$dbhost = 'localhost';
-$dbport = '3306';
+$dbhost = getenv('WATAHA_DB_HOST');
+$dbport = getenv('WATAHA_DB_PORT');
 $dbname = getenv('WATAHA_DB_LOGIN');
 $dbuser = getenv('WATAHA_DB_LOGIN');
 $dbpasswd = getenv('WATAHA_DB_PASS');
