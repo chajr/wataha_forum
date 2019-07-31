@@ -8,11 +8,8 @@ scope_settings.xml
 vcs.xml
 .idea
 cache/*
-!cache/.htaccess
-!cache/index.html
+!cache/.gitkeep
 files/*
-!files/.htaccess
-!files/index.html
+!files/.gitkeep
 images/avatars/upload/*
-!images/avatars/upload/index.htm
-!images/avatars/upload/.htaccess
+!images/avatars/upload/.gitkeep
