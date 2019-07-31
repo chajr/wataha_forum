@@ -5,7 +5,7 @@
  * @copyright chajr/bluetree
  */
 
-$path = __DIR__ . '../cache';
+$path = __DIR__ . '/../cache';
 
 if (!file_exists($path)) {
     return null;
