@@ -5,23 +5,23 @@
  * @copyright chajr/bluetree
  */
 
-$path = '../cache';
-if(!file_exists($path)){
-    return NULL;
+$path = __DIR__ . '../cache';
+
+if (!file_exists($path)) {
+    return null;
 }
+
 $handle = opendir($path);
 
-if($handle){
-    while($element = readdir($handle)){
-        if ($element == '..' 
-            || $element == '.'
-            || $element == '.htaccess'
-            || $element == 'index.htm'
-        ) {
+if ($handle) {
+    while ($element = readdir($handle)) {
+        if ($element === '..' || $element === '.') {
             continue;
         }
+
         @unlink($path . '/' . $element);
     }
     closedir($handle);
 }
-echo 'deleted';
+
+echo 'deleted' . PHP_EOL;
