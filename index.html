@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>ASG</title>
+        <!--[if IE]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            body{
+                margin: 0;
+                color:#fff;
+                font-family: Georgia,'Times New Roman',times,serif;
+                background-color: #3f3f3f;
+                text-shadow: 2px 2px #000;
+                text-align: center;
+            }
+            header, footer, aside, nav, article, section {  
+                display: block;  
+            }
+            header{
+                padding: 10px;
+                margin: 0 0 25px 0;
+                background-color: cornflowerblue;
+                background-image: -webkit-gradient(
+                    linear,
+                    left bottom,
+                    left top,
+                    color-stop(0, #365673),
+                    color-stop(100, #367d8f)
+                );
+                background-image: -moz-linear-gradient(
+                    center bottom,
+                    #365673 0%,
+                    #367d8f 100%
+                );
+                border-bottom: 1px solid #367d8f;
+                box-shadow:0 0 15px #000;
+                -moz-box-shadow:0 0 15px #000;
+                -webkit-box-shadow:0 0 15px #000;
+            }
+            h1{
+                margin: 0px auto 10px auto;
+            }
+			h1 a{
+				color:#fff;
+				text-decoration:none;
+			}
+			h1 a:hover{
+				color:#ccc;
+				text-decoration:underline;
+			}
+            h3{
+                margin: 10px auto 10px auto;
+            }
+            section{
+                width: 56%;
+                float: left;
+                background-color: #454647;
+            }
+            aside{
+                width: 35%;
+                float: right;
+                background-color: #303131;
+            }
+            .border{
+                border: 1px solid #434647;
+                box-shadow:0 0 15px #000;
+                -moz-box-shadow:0 0 15px #000;
+                -webkit-box-shadow:0 0 15px #000;
+                height: 240px;
+                margin:10px;
+                border-radius:10px;
+                -moz-border-radius:10px;
+                -webkit-border-radius:10px;
+            }
+            hr{
+                width: 80%;
+                margin: 0 auto 0 auto;
+                color: #434647;
+                margin-top: 15px;
+            }
+            time, .time{
+                font-size: 45px;
+            }
+            .time{
+                width:70px;
+                display: inline-block;
+            }
+            footer{
+                padding: 20px;
+                border-top: 1px solid #2f2f2f;
+                position: fixed;
+                bottom: 0px;
+                background-color: #232323;
+                width: 100%;
+                z-index: 0;
+                box-shadow:0 0 15px #000;
+                -moz-box-shadow:0 0 10px #000;
+                -webkit-box-shadow:0 0 10px #000;
+            }
+            footer a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .index{
+                position: relative;
+                z-index: 1;
+            }
+            footer div{
+                position: absolute;
+                bottom: 20px;
+                right: 50px;
+            }
+            footer div a{
+                color: #999;
+                text-shadow:none;
+                font-size: 10px;
+                text-decoration: underline;
+            }
+            footer div a:hover{
+                text-decoration: none;
+                color: #666;
+            }
+            .red{
+                color: #ff0000;
+            }
+            section section{
+                margin: 45px auto 0 auto;
+                width: 410px;
+                float: none;
+            }
+            section#blocks{
+                width:70%;
+                margin: 30px auto 200px auto;
+                border: 1px solid #434647;
+                box-shadow:0 0 15px #000;
+                -moz-box-shadow:0 0 15px #000;
+                -webkit-box-shadow:0 0 15px #000;
+                border-radius:10px;
+                -moz-border-radius:10px;
+                -webkit-border-radius:10px;
+                padding: 20px;
+                float: none;
+                font-size: 30px;
+                font-family: Arial;
+            }
+            img{
+                border: none;
+            }
+            div.block{
+                margin:8px 10px;
+                float: left;
+                height: 15px;
+                width: 4px;
+                background-color: #fff;
+            }
+            .dark{
+                background-color: #ccc;
+            }
+            div.block_small{
+                float: left;
+                height: 1px;
+                width: 1px;
+                background-color: #fff;
+                margin: 1px;
+            }
+            div#pasek{
+                height: 10px;
+                width: 379px;
+                margin: 10px auto;
+            }
+            div#pasek div{
+                height: 10px;
+                float: left;
+            }
+            div#pasek .srodek{
+                background-color: #ff0000;
+                width: 3px;
+            }
+            div#pasek .lewy{
+                background-color: #ffffff;
+            }
+            #current{
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="index">
+            <h1>JSMA Wataha</h1>
+            Jurajskie Stowarzyszenie Maniaków Airsoftu Wataha
+        </header>
+        <section id="blocks" class="index">
+            <h1>
+                <a href="http://wataha.at/forum">Forum JSMA Wataha</a>
+            </h1>
+        </section>
+        <div style="clear:both"></div>
+        <footer>
+            <a href="http://www.w3.org/html/logo/"><h3>HTML</h3>
+                <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" 
+                     width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" 
+                     title="HTML5 Powered with CSS3 / Styling, and Semantics"
+                />
+            </a>
+            <div>
+                <a href="http://bluetree.pl">bluetree.pl</a>
+            </div>
+        </footer>
+        <script type="text/javascript" 
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" >
+        </script>
+    </body>
+</html>
