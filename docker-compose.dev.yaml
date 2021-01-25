@@ -20,7 +20,7 @@ services:
     image: chajr/wataha
     container_name: wataha
     volumes:
-#      - ./dev/log:/var/log/
+      - ./dev/log:/var/log/
       - ./dev/FTP:/var/www/html/FTP
       - ./dev/files:/var/www/html/forum/files
       - ./dev/images/avatars/upload:/var/www/html/forum/images/avatars/upload
