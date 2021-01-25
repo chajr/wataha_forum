@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  maria_db:
+    image: mariadb
+    container_name: maria_db
+    ports:
+      - 3360:3306
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: unless-stopped
+    volumes:
+      - maria_db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=wataha
+      - MYSQL_DATABASE=wataha
+      - MYSQL_USER=wataha
+
+  wataha:
+    image: chajr/wataha
+    container_name: wataha
+    volumes:
+#      - ./dev/log:/var/log/
+      - ./dev/FTP:/var/www/html/FTP
+      - ./dev/files:/var/www/html/forum/files
+      - ./dev/images/avatars/upload:/var/www/html/forum/images/avatars/upload
+      - ./dev/images/avatars/gallery:/var/www/html/forum/images/avatars/gallery
+    ports:
+      - 80:80
+    environment:
+      - WATAHA_DB_LOGIN=wataha
+      - WATAHA_DB_PASS=wataha
+      - WATAHA_DB_HOST=maria_db
+      - WATAHA_DB_PORT=3306
+    depends_on:
+      - maria_db
+
+volumes:
+  maria_db:
+
