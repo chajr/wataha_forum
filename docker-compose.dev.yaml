@@ -10,6 +10,7 @@ services:
     restart: unless-stopped
     volumes:
       - maria_db:/var/lib/mysql
+      - ./dev/wataha.sql:/docker-entrypoint-initdb.d/wataha.sql:ro
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_PASSWORD=wataha
@@ -17,14 +18,12 @@ services:
       - MYSQL_USER=wataha
 
   wataha:
-    image: chajr/wataha
+    image: chajr/php56-nginx-extended
     container_name: wataha
     volumes:
       - ./dev/log:/var/log/
-      - ./dev/FTP:/var/www/html/FTP
-      - ./dev/files:/var/www/html/forum/files
-      - ./dev/images/avatars/upload:/var/www/html/forum/images/avatars/upload
-      - ./dev/images/avatars/gallery:/var/www/html/forum/images/avatars/gallery
+      - ./conf/wataha-dev.conf:/etc/nginx/conf.d/default.conf
+      - ./source:/var/www/html
     ports:
       - 80:80
     environment:
@@ -37,4 +36,3 @@ services:
 
 volumes:
   maria_db:
-

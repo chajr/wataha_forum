@@ -5,4 +5,6 @@ RUN rm /var/www/html/index.php
 COPY --chown=nginx:nginx ./source /var/www/html
 COPY --chown=nginx:nginx ./conf/wataha.conf /etc/nginx/conf.d/default.conf
 
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 HEALTHCHECK --interval=20s --timeout=5s CMD curl -f http://127.0.0.1/forum/index.php || exit 1

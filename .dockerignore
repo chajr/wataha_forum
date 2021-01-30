@@ -1,0 +1,13 @@
+source/forum/install
+source/forum/docs
+source/forum/install-dev
+source/forum/cache/*
+source/forum/files/*
+source/forum/download/*
+!source/forum/download/index.htm
+!source/forum/download/file.php
+source/forum/images/avatars/upload/*
+!source/forum/images/avatars/upload/index.htm
+source/forum/images/avatars/gallery/*
+!source/forum/images/avatars/gallery/index.htm
+!source/forum/umil/error_files/*
