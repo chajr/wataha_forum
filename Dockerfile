@@ -7,7 +7,7 @@ RUN rm /var/www/html/index.php
 COPY --chown=nginx:nginx ./source /var/www/html
 COPY --chown=nginx:nginx ./conf/wataha.conf /etc/nginx/conf.d/default.conf
 
-RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+COPY ./conf/php.ini "$PHP_INI_DIR/php.ini"
 
 USER nginx
 
