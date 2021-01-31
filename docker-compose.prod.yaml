@@ -15,11 +15,11 @@ services:
     image: chajr/wataha
     container_name: wataha
     volumes:
-      - ./projects/wataha/log:/var/log/
-      - wataha-data/FTP:/var/www/html/FTP
-      - wataha-data/files:/var/www/html/forum/files
-      - wataha-data/images/avatars/upload:/var/www/html/forum/images/avatars/upload
-      - wataha-data/images/avatars/gallery:/var/www/html/forum/images/avatars/gallery
+      - ./dev/log:/var/log/
+      - wataha-ftp:/var/www/html/FTP
+      - wataha-files:/var/www/html/forum/files
+      - wataha-upload:/var/www/html/forum/images/avatars/upload
+      - wataha-gallery:/var/www/html/forum/images/avatars/gallery
     env_file:
       - ./etc/.env-wataha
     depends_on:
@@ -27,4 +27,7 @@ services:
 
 volumes:
   maria_db:
-  wataha-data:
+  wataha-ftp:
+  wataha-files:
+  wataha-upload:
+  wataha-gallery:
