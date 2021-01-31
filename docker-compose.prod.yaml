@@ -4,8 +4,6 @@ services:
   maria_db:
     image: mariadb
     container_name: maria_db
-    ports:
-      - 3360:3306
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: unless-stopped
     volumes:
