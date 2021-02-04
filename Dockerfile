@@ -11,4 +11,4 @@ COPY ./conf/php.ini "$PHP_INI_DIR/php.ini"
 
 USER nginx
 
-HEALTHCHECK --interval=20s --timeout=5s CMD curl -f http://127.0.0.1/forum/index.php || exit 1
+HEALTHCHECK --interval=20s --timeout=5s CMD curl -f http://127.0.0.1:8080/forum/ || exit 1
